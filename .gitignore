@@ -1,0 +1,14 @@
+.vs/
+*.vsidx
+*.v2
+*.suo
+*.user
+x64/
+Debug/
+Release/
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.idb
+*.log
