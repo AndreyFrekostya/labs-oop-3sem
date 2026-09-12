@@ -12,3 +12,5 @@ Release/
 *.exe
 *.idb
 *.log
+*.sln
+*.vcxproj
