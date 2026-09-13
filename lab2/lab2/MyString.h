@@ -7,9 +7,12 @@ private:
 public:
     MyString ();
 	MyString (char* s);	// Объявление конструктора
+	MyString (const MyString& s);			// Конструктор копирования
+	MyString& operator= (const MyString& s);	// Присвоение
     ~MyString();		// Объявление деструктора
 
 	void Copy (char* s);
 	char* GetString();	// Объявление метода (accessor)
 	int GetLength();	// Объявление метода (длина строки)
+	void Out();			// Вывод содержимого строки в консоль
 };

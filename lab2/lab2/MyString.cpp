@@ -1,4 +1,8 @@
+#include <iostream>
+#include <cstring>
 #include "MyString.h"
+
+using namespace std;
 
 void MyString::Copy (char* s)
 {
@@ -19,6 +23,22 @@ MyString::MyString (char* s)
 	Copy(s);
 }
 
+// Конструктор копирования
+MyString::MyString (const MyString& s)
+{
+	m_pStr = 0;
+	Copy(s.m_pStr);
+}
+
+// Присвоение
+MyString& MyString::operator= (const MyString& s)
+{
+	if (this == &s)
+		return *this;
+	Copy(s.m_pStr);
+	return *this;
+}
+
 // Определение деструктора.
 MyString::~MyString()
 {
@@ -35,4 +55,9 @@ char* MyString::GetString()
 int MyString::GetLength()
 {
 	return strlen(m_pStr) + 1;
+}
+
+void MyString::Out()
+{
+	cout << m_pStr;
 }

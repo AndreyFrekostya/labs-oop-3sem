@@ -24,12 +24,21 @@
     <ClCompile Include="lab2\Lab3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lab2\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lab2\MyString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lab2\MyVector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lab2\Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lab2\MyStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
