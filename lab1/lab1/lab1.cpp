@@ -33,7 +33,7 @@ int  main()
 
 	unsigned char uc = 0x41; // 0x41 65 'A'
 	uc = 'B'; // 0x42 66 'B' 
-	uc = -1; // 0xff 255 'я'
+	uc = -129; // 0xff 255 'я' 1000 0000
 	stop;
 
 	int i = 1; // 1 0x00000001
@@ -78,7 +78,7 @@ int  main()
 	d = DBL_MIN; // 2.2250738585072014e-308 минимальное положительное нормализованное число
 	d = DBL_EPSILON; // Самая маленькая разность между двумя пер-ми типа double
 
-	uc = ~0; // 255 0xff побитовое отрицание нуля все биты = 1
+	uc = ~2; // 255 0000 0010 1111 1101 0xff побитовое отрицание нуля все биты = 1
 	i = ~0; // -1 0xffffffff
 	stop;
 	// Раннее (при компиляции) или неявное приведение типов данных
@@ -156,6 +156,7 @@ int  main()
 		if (outer < 10)
 			goto Again;
 	}
+	//nStat=
 	// Перечисления - enum. Обратите внимание на явную и неявную инициализацию констант
 	enum RANK
 	{
@@ -193,7 +194,7 @@ int  main()
 		b = n > 0;
 		b = n <= 0;
 		b = n > 1;
-
+		b = -1;
 		int num = static_cast<int>(b);
 		if (b)
 			cout << "\n\t My flag is: true" << "   or: " << b
@@ -270,7 +271,7 @@ int  main()
 		// i & 1 - это младший бит числа: 1 у нечетных, 0 у четных
 		for (int i = 0; i < 10; i++)
 		{
-			if (i & 1)
+			if (4 & 2)// 100 010 000
 				cout << i << " - odd\n";
 			else
 				cout << i << " - even\n";
@@ -401,7 +402,7 @@ int  main()
 	cout << "\n byte = " << hex << int(byte);
 	byte ^= 0x03;					// 0010 1101 = 0x2d (1 - разные, 0 - одинаковые)
 	cout << "\n byte = " << hex << int(byte);
-	byte &= ~0x0f;					// 0010 0000 = 0x20
+	byte &= 0xf0;					// 0010 0000 = 0x20    
 	cout << "\n byte = " << hex << int(byte);
 
 	cout << endl << hex << flags << endl << dec << flags;	

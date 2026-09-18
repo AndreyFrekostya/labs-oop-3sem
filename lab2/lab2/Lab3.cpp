@@ -84,7 +84,7 @@ int main()
 
 		cout << "\nInteger Stack has: " << stack.GetSize() << " elements";
 		stack.Pop();
-//		stack.Pop();		// Здесь должно быть "выброшено" исключение
+		stack.Pop();		// Здесь должно быть "выброшено" исключение
 		stack.Push(2);
 
 //		int i = stack[3];	// Здесь должно быть "выброшено" исключение
@@ -133,7 +133,7 @@ int main()
 
 	v.push_back(-1);
 	v.push_back(-2);
-
+	//
 	pr (v, "vector");
 
 
@@ -142,7 +142,7 @@ int main()
 	cout << n << endl;
 
 	v.push_back(-1);
-
+	v.push_back(-1);
 	n = v.capacity();
 
 	cout << n << endl;
@@ -400,6 +400,8 @@ int main()
 
 	//Создание двухмерного массива
 
+
+	vector<vector<int>> a(2, vector<int>(7, 1));
 
 /////////////////////////////////////////////////////////////////////
 	//Задание 4. Списки. Операции, характерные для списков.
